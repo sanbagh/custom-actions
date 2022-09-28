@@ -1,0 +1,22 @@
+name: Create issue on github
+
+on:
+  push:
+
+jobs:
+  create-issue-on-github:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/issue
+        id: issue
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          title: issue title
+          body: issue body
+          assignees: |
+            sanbagh
+            san-bagh
+      - name: out put issue object
+        run: echo ${{steps.issue.outputs.issue}}
+      

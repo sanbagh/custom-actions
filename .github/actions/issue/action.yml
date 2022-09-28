@@ -1,0 +1,19 @@
+name: Create issue on github
+description: Used to create issue on github
+inputs:
+  token:
+    description: github token
+    required: true
+  title:
+    description: issue title
+    required: true
+  body:
+    description: issue body
+  assignees:
+    description: issue assignees
+outputs:
+  issue:
+    description: json representation of issue object 
+runs:
+  using: node12
+  main: dist/index.js
