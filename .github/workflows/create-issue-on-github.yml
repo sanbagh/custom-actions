@@ -16,7 +16,6 @@ jobs:
           body: issue body
           assignees: |
             sanbagh
-            san-bagh
       - name: out put issue object
         run: echo ${{steps.issue.outputs.issue}}
       
