@@ -1,0 +1,16 @@
+name: Hello World
+author: Sanjeev Baghel
+description: Greet to the given person
+
+inputs:
+  who-to-greet:
+    description: 'Who to greet'
+    required: true
+    default: Sanjeev Baghel
+
+outputs:
+  time:
+    description: 'The greet time'
+runs:
+  using: node12
+  main: dist/index.js
